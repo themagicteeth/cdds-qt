@@ -1,24 +1,22 @@
+"""Main entry point to the application"""
+
 import sys
 
 from PyQt5.QtWidgets import QApplication
 from cdds.CDDSMainWindow import CDDS
 from cdds.CDDSUI import CDDSUI
 
-def main():
-    """Main entry point to the application"""
-
+if __name__ == "__main__":
     # Create the aplication
-    app = QApplication(sys.argv)
+    APP = QApplication(sys.argv)
 
     # Initialize the window
-    window = CDDS()
+    WINDOW = CDDS()
 
     # Create the UI, and bind to the window
-    ui = CDDSUI()
-    ui.setupUi(window)
+    UI = CDDSUI()
+    UI.setupUi(WINDOW)
 
     # Show the window
-    window.show()
-    sys.exit(app.exec_())
-
-main()
+    WINDOW.show()
+    sys.exit(APP.exec_())
