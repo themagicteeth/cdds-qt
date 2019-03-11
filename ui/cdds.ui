@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>800</width>
-    <height>625</height>
+    <height>626</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -55,6 +55,21 @@
         <height>31</height>
        </rect>
       </property>
+      <property name="tabletTracking">
+       <bool>false</bool>
+      </property>
+      <property name="contextMenuPolicy">
+       <enum>Qt::DefaultContextMenu</enum>
+      </property>
+      <property name="acceptDrops">
+       <bool>false</bool>
+      </property>
+      <property name="toolTip">
+       <string>Select the content vendor</string>
+      </property>
+      <property name="editable">
+       <bool>false</bool>
+      </property>
       <item>
        <property name="text">
         <string>Daz3D</string>
@@ -80,6 +95,30 @@
         <height>30</height>
        </rect>
       </property>
+      <property name="cursor" stdset="0">
+       <cursorShape>IBeamCursor</cursorShape>
+      </property>
+      <property name="acceptDrops">
+       <bool>false</bool>
+      </property>
+      <property name="toolTip">
+       <string>Product name, this will be used for the name of the DIM (all spaces will be stripped)</string>
+      </property>
+      <property name="statusTip">
+       <string/>
+      </property>
+      <property name="whatsThis">
+       <string/>
+      </property>
+      <property name="inputMethodHints">
+       <set>Qt::ImhLatinOnly</set>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Box</enum>
+      </property>
+      <property name="lineWrapMode">
+       <enum>QPlainTextEdit::NoWrap</enum>
+      </property>
      </widget>
      <widget class="QSpinBox" name="skuSpinBox">
       <property name="geometry">
@@ -89,6 +128,18 @@
         <width>141</width>
         <height>30</height>
        </rect>
+      </property>
+      <property name="cursor">
+       <cursorShape>IBeamCursor</cursorShape>
+      </property>
+      <property name="acceptDrops">
+       <bool>false</bool>
+      </property>
+      <property name="toolTip">
+       <string>Enter product SKU, or generate a random one</string>
+      </property>
+      <property name="buttonSymbols">
+       <enum>QAbstractSpinBox::NoButtons</enum>
       </property>
       <property name="minimum">
        <number>1</number>
@@ -109,11 +160,26 @@
       <property name="toolTip">
        <string>Browse for a zip archive</string>
       </property>
+      <property name="statusTip">
+       <string/>
+      </property>
       <property name="text">
        <string>Browse...</string>
       </property>
+      <property name="autoDefault">
+       <bool>false</bool>
+      </property>
+      <property name="default">
+       <bool>false</bool>
+      </property>
+      <property name="flat">
+       <bool>false</bool>
+      </property>
      </widget>
      <widget class="QPlainTextEdit" name="archiveInput">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
       <property name="geometry">
        <rect>
         <x>20</x>
@@ -124,6 +190,36 @@
       </property>
       <property name="toolTip">
        <string>Enter the path to the zip archive, or browse to select one</string>
+      </property>
+      <property name="inputMethodHints">
+       <set>Qt::ImhNone</set>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Box</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Sunken</enum>
+      </property>
+      <property name="verticalScrollBarPolicy">
+       <enum>Qt::ScrollBarAlwaysOff</enum>
+      </property>
+      <property name="horizontalScrollBarPolicy">
+       <enum>Qt::ScrollBarAlwaysOff</enum>
+      </property>
+      <property name="lineWrapMode">
+       <enum>QPlainTextEdit::NoWrap</enum>
+      </property>
+      <property name="readOnly">
+       <bool>false</bool>
+      </property>
+      <property name="backgroundVisible">
+       <bool>false</bool>
+      </property>
+      <property name="centerOnScroll">
+       <bool>false</bool>
+      </property>
+      <property name="placeholderText">
+       <string>Browse for a content archive</string>
       </property>
      </widget>
      <widget class="QLabel" name="vendorLabel">
@@ -170,7 +266,7 @@
        <rect>
         <x>20</x>
         <y>180</y>
-        <width>371</width>
+        <width>481</width>
         <height>341</height>
        </rect>
       </property>
@@ -179,6 +275,9 @@
       </property>
       <property name="dragEnabled">
        <bool>true</bool>
+      </property>
+      <property name="dragDropOverwriteMode">
+       <bool>false</bool>
       </property>
       <property name="dragDropMode">
        <enum>QAbstractItemView::InternalMove</enum>
@@ -200,9 +299,9 @@
      <widget class="QGraphicsView" name="fileContentsView">
       <property name="geometry">
        <rect>
-        <x>400</x>
+        <x>520</x>
         <y>180</y>
-        <width>371</width>
+        <width>251</width>
         <height>291</height>
        </rect>
       </property>
@@ -210,7 +309,7 @@
      <widget class="QLabel" name="fileContentsLabel">
       <property name="geometry">
        <rect>
-        <x>400</x>
+        <x>520</x>
         <y>160</y>
         <width>101</width>
         <height>16</height>
@@ -221,6 +320,9 @@
       </property>
      </widget>
      <widget class="QPlainTextEdit" name="uuidInput">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
       <property name="geometry">
        <rect>
         <x>400</x>
@@ -228,6 +330,18 @@
         <width>281</width>
         <height>30</height>
        </rect>
+      </property>
+      <property name="cursor" stdset="0">
+       <cursorShape>ForbiddenCursor</cursorShape>
+      </property>
+      <property name="toolTip">
+       <string>Generated UUID, used internally by DAZ</string>
+      </property>
+      <property name="inputMethodHints">
+       <set>Qt::ImhNone</set>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Box</enum>
       </property>
       <property name="readOnly">
        <bool>true</bool>
@@ -255,6 +369,9 @@
         <height>31</height>
        </rect>
       </property>
+      <property name="toolTip">
+       <string>Generate a new UUID</string>
+      </property>
       <property name="text">
        <string>Generate</string>
       </property>
@@ -268,11 +385,23 @@
         <height>31</height>
        </rect>
       </property>
+      <property name="cursor">
+       <cursorShape>ArrowCursor</cursorShape>
+      </property>
+      <property name="acceptDrops">
+       <bool>false</bool>
+      </property>
+      <property name="toolTip">
+       <string>Generate a random SKU</string>
+      </property>
       <property name="text">
        <string>Random SKU</string>
       </property>
      </widget>
      <widget class="QPushButton" name="pushButton">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
       <property name="geometry">
        <rect>
         <x>659</x>
@@ -288,7 +417,7 @@
     </widget>
     <widget class="QWidget" name="productDetailsTab">
      <property name="enabled">
-      <bool>true</bool>
+      <bool>false</bool>
      </property>
      <attribute name="title">
       <string>Product Details</string>
@@ -495,6 +624,9 @@
      </widget>
     </widget>
     <widget class="QWidget" name="smartContentTab">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
      <attribute name="title">
       <string>Smart Content Metadata</string>
      </attribute>
@@ -647,4 +779,5 @@
  </widget>
  <resources/>
  <connections/>
+ <slots/>
 </ui>

@@ -36,3 +36,7 @@ def write_supplement(product_name):
 ''')
 
     return supplement_template.substitute(product=product_name)
+
+
+# def read_zip():
+ #   import zipfile
