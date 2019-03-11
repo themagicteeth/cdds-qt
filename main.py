@@ -66,10 +66,6 @@ if __name__ == "__main__":
 
     MODEL = set_file_model()
     UI.packageFilesTreeView.setModel(MODEL)
-    # UI.packageFilesTreeView.setDragDropMode(QAbstractItemView.InternalMove)
-    # UI.packageFilesTreeView.setDragEnabled(True)
-    # UI.packageFilesTreeView.setAcceptDrops(True)
-    # UI.packageFilesTreeView.setDropIndicatorShown(True)
 
     # Show the window
     WINDOW.show()
