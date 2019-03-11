@@ -1,12 +1,13 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'cdds.ui'
+# Form implementation generated from reading ui file '../ui/cdds.ui'
 #
 # Created by: PyQt5 UI code generator 5.12
 #
 # WARNING! All changes made in this file will be lost!
 
 from PyQt5 import QtCore, QtGui, QtWidgets
+
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -34,6 +35,8 @@ class Ui_MainWindow(object):
         self.packageNameInput.setObjectName("packageNameInput")
         self.skuSpinBox = QtWidgets.QSpinBox(self.createManifestTab)
         self.skuSpinBox.setGeometry(QtCore.QRect(440, 110, 141, 31))
+        self.skuSpinBox.setMinimum(1)
+        self.skuSpinBox.setMaximum(9999999)
         self.skuSpinBox.setObjectName("skuSpinBox")
         self.browsePushButton = QtWidgets.QPushButton(self.createManifestTab)
         self.browsePushButton.setGeometry(QtCore.QRect(310, 40, 80, 31))
@@ -64,6 +67,7 @@ class Ui_MainWindow(object):
         self.fileContentsLabel.setObjectName("fileContentsLabel")
         self.uuidInput = QtWidgets.QPlainTextEdit(self.createManifestTab)
         self.uuidInput.setGeometry(QtCore.QRect(400, 40, 281, 31))
+        self.uuidInput.setReadOnly(True)
         self.uuidInput.setObjectName("uuidInput")
         self.uuidLabel = QtWidgets.QLabel(self.createManifestTab)
         self.uuidLabel.setGeometry(QtCore.QRect(400, 20, 101, 16))
