@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file '../ui/cdds.ui'
+# Form implementation generated from reading ui file 'cdds.ui'
 #
 # Created by: PyQt5 UI code generator 5.12
 #
@@ -31,10 +31,10 @@ class Ui_MainWindow(object):
         self.vendorComboBox.addItem("")
         self.vendorComboBox.addItem("")
         self.packageNameInput = QtWidgets.QPlainTextEdit(self.createManifestTab)
-        self.packageNameInput.setGeometry(QtCore.QRect(20, 110, 281, 31))
+        self.packageNameInput.setGeometry(QtCore.QRect(20, 110, 281, 30))
         self.packageNameInput.setObjectName("packageNameInput")
         self.skuSpinBox = QtWidgets.QSpinBox(self.createManifestTab)
-        self.skuSpinBox.setGeometry(QtCore.QRect(440, 110, 141, 31))
+        self.skuSpinBox.setGeometry(QtCore.QRect(440, 110, 141, 30))
         self.skuSpinBox.setMinimum(1)
         self.skuSpinBox.setMaximum(9999999)
         self.skuSpinBox.setObjectName("skuSpinBox")
@@ -42,7 +42,7 @@ class Ui_MainWindow(object):
         self.browsePushButton.setGeometry(QtCore.QRect(310, 40, 80, 31))
         self.browsePushButton.setObjectName("browsePushButton")
         self.archiveInput = QtWidgets.QPlainTextEdit(self.createManifestTab)
-        self.archiveInput.setGeometry(QtCore.QRect(20, 40, 281, 31))
+        self.archiveInput.setGeometry(QtCore.QRect(20, 40, 281, 30))
         self.archiveInput.setObjectName("archiveInput")
         self.vendorLabel = QtWidgets.QLabel(self.createManifestTab)
         self.vendorLabel.setGeometry(QtCore.QRect(310, 90, 101, 16))
@@ -55,6 +55,9 @@ class Ui_MainWindow(object):
         self.archiveLabel.setObjectName("archiveLabel")
         self.packageFilesTreeView = QtWidgets.QTreeView(self.createManifestTab)
         self.packageFilesTreeView.setGeometry(QtCore.QRect(20, 180, 371, 341))
+        self.packageFilesTreeView.setAcceptDrops(True)
+        self.packageFilesTreeView.setDragEnabled(True)
+        self.packageFilesTreeView.setDragDropMode(QtWidgets.QAbstractItemView.InternalMove)
         self.packageFilesTreeView.setObjectName("packageFilesTreeView")
         self.packageFilesLabel = QtWidgets.QLabel(self.createManifestTab)
         self.packageFilesLabel.setGeometry(QtCore.QRect(20, 160, 101, 16))
@@ -66,7 +69,7 @@ class Ui_MainWindow(object):
         self.fileContentsLabel.setGeometry(QtCore.QRect(400, 160, 101, 16))
         self.fileContentsLabel.setObjectName("fileContentsLabel")
         self.uuidInput = QtWidgets.QPlainTextEdit(self.createManifestTab)
-        self.uuidInput.setGeometry(QtCore.QRect(400, 40, 281, 31))
+        self.uuidInput.setGeometry(QtCore.QRect(400, 40, 281, 30))
         self.uuidInput.setReadOnly(True)
         self.uuidInput.setObjectName("uuidInput")
         self.uuidLabel = QtWidgets.QLabel(self.createManifestTab)
@@ -173,7 +176,7 @@ class Ui_MainWindow(object):
         self.tabWidget.addTab(self.smartContentTab, "")
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 800, 20))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 800, 21))
         self.menubar.setObjectName("menubar")
         MainWindow.setMenuBar(self.menubar)
         self.toolBar = QtWidgets.QToolBar(MainWindow)

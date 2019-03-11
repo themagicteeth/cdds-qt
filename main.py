@@ -4,7 +4,7 @@
 
 import sys
 
-from PyQt5.QtWidgets import QApplication, QMainWindow, QFileDialog
+from PyQt5.QtWidgets import QApplication, QMainWindow, QFileDialog, QAbstractItemView
 
 from ui.cdds_ui import Ui_MainWindow
 from util.manifest_utils import generate_uuid
@@ -37,6 +37,17 @@ def browse():
         set_archive(file_name)
 
 
+def set_file_model():
+    """Create a file system view"""
+    from PyQt5.QtWidgets import QFileSystemModel
+
+    model = QFileSystemModel()
+    model.setRootPath('')
+    model.setReadOnly(False)
+
+    return model
+
+
 if __name__ == "__main__":
     # Create the aplication
     APP = QApplication(sys.argv)
@@ -52,6 +63,13 @@ if __name__ == "__main__":
     UI.generateUuidButton.clicked.connect(set_uuid)
     UI.randomSkuButton.clicked.connect(set_sku)
     UI.browsePushButton.clicked.connect(browse)
+
+    MODEL = set_file_model()
+    UI.packageFilesTreeView.setModel(MODEL)
+    # UI.packageFilesTreeView.setDragDropMode(QAbstractItemView.InternalMove)
+    # UI.packageFilesTreeView.setDragEnabled(True)
+    # UI.packageFilesTreeView.setAcceptDrops(True)
+    # UI.packageFilesTreeView.setDropIndicatorShown(True)
 
     # Show the window
     WINDOW.show()
