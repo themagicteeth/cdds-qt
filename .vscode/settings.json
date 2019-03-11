@@ -10,6 +10,15 @@
     "update.showReleaseNotes": false,
     "telemetry.enableTelemetry": false,
     "telemetry.enableCrashReporter": false,
+    "material-icon-theme.hidesExplorerArrows": true,
+    "material-icon-theme.files.associations": {
+        ".pylintrc": "python-misc",
+        "cdds.ui": "xml"
+    },
+    "material-icon-theme.folders.associations": {
+        "ui": "components",
+        "cdds": "app"
+    },
     "python.linting.enabled": true,
     "vsintellicode.typescript.completionsEnabled": false,
     "vsintellicode.java.completionsEnabled": false,
